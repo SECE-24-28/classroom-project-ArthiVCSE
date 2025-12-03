@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+            body{
+                height:200vh;
+            }
+            .outer-container{
+                border: 1px solid black;
+                width: 80vw;
+                height:80vh;
+                margin: 20px auto;
+            }
+            .inner-container{
+                position:relative;
+                border: 1px dashed rgba(255, 0, 0, 0.687);
+                width:60vw;
+                height: 75vh;
+                margin: 20px auto;
+            }
+            .box{
+                height:100px;
+                border:1px solid rgb(183, 0, 255);
+                width: 100px;
+                color:rgb(13, 2, 2);
+                border-radius: 10px;
+            }
+            .abs{
+                background-color: rgb(93, 205, 49);
+                position:absolute;
+                top:20rem;
+                left:210px;
+            }
+            .rel{
+                background-color: rgb(112, 180, 210);
+                position:relative;
+                top: 13rem;
+                left:110px;
+            }
+            .fix{
+                background-color: rgb(250, 216, 46);
+                position:fixed;
+                top: 0px;
+                left: 0px;
+            }
+            .sti{ 
+                background-color: rgb(250, 121, 203);
+                position: sticky;
+                top:100px;
+                left:100px;             }
+        </style>
+    </head>
+    <body></body>
+        <div class="outer-container">
+            <div class="inner-container">
+                <div class="box abs">absolute div</div>
+                <div class="box rel">relative div</div>
+                <div class="box sti">sticky div</div>
+                <div class="box fix">fixed div</div>   
+            </div>
+        </div>
+    </body>
+</html>
