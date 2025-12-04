@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function display(){
+            let item=document.getElementById("txt").value;
+            let list=document.getElementById("li");
+            let newItem = document.createElement("li");
+            newItem.textContent = item;
+            list.appendChild(newItem);
+        }
+    </script>
+</head>
+<body id="main">
+
+    <input type="text" id="txt" placeholder="Enter element"></input>
+    <button onclick="display()">ADD</button>
+    <br>
+    <ul id="li"></ul>
+
+</body>
+</html>
