@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+            .container{
+                background-color: rgb(255, 255, 255);
+                display:flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .box{
+                background-color: rgb(179, 192, 179);
+                color:rgb(0, 0, 0);
+                border-radius: 5px;
+                flex:1;
+            }
+            p{
+                font-style: italic;
+            }
+            h1{
+                padding-left: 15px;
+                padding-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Responsive Flex Cards</h1>
+        <div class="container">
+            <div class="box"><h3>Card 1</h3>
+                <p>This is a simple responsive card using Flexbox</p>
+            </div>
+            <div class="box"><h3>Card 2</h3>
+            <p>The cards wrap automatically on small screen</p></div>
+            <div class="box"><h3>Card 3</h3>
+            <p>Resize the window to see the effect</p></div>
+        </div>
+
+    </body>
+</html>
