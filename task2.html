@@ -1,30 +1,26 @@
-<html>
-    <head>
-        <style>
-            .container{
-                padding-top: 30px;
-                background-color: rgb(255, 254, 254);
-                display:flex;
-                flex-wrap: wrap;
-            }
-            .box{
-                background-color: rgb(214, 212, 209);
-                color:rgb(0, 0, 0);
-                flex:1;
-                padding-top: 25vh;
-            }
-            p{
-                font-style: italic;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Responsive Image and Text</h1>
-        <div class="container">
-            <div><img src="coffee1.jpg" height="500" width="400"><img></div>
-            <div class="box"><h2>Flexbox Responsive Layout</h2>
-            <p>Coffee is a popular beverage made from roasted and ground seeds of the coffee plant, known for its stimulating effect from caffeine. It can be served hot or cold, and its flavor profile is often described as a balance of bitterness, sweetness, and acidity.
-            </p></div>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function display(){
+            let item=document.getElementById("txt").value;
+            let list=document.getElementById("li");
+            let newItem = document.createElement("li");
+            newItem.textContent = item;
+            list.appendChild(newItem);
+        }
+    </script>
+</head>
+<body id="main">
+
+    <input type="text" id="txt" placeholder="Enter element"></input>
+    <button onclick="display()">ADD</button>
+    <br>
+    <ul id="li"></ul>
+
+</body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  function press() {
+      let body = document.getElementById("main");
+      let heading = document.getElementById("h");
+
+      if (heading.innerHTML === "Light Mode") {
+        heading.innerHTML = "Dark Mode";
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+      } else {
+        heading.innerHTML = "Light Mode";
+        body.style.backgroundColor = "white";
+        body.style.color = "black";
+      }
+    }
+</script>
+</head>
+<body id="main">
+    <h1 id="h">Light Mode</h1>
+    <button id="btn" onclick="press()">Switch mode</button>
+</body>
+</html>
