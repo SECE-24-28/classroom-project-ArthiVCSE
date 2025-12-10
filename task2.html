@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <head>
+        <title>Search word</title>
+    </head>
+    <body>
+        <input type="text" id="t1" placeholder="Search...">
+        <ol id="list"></ol>
+    </body>
     <script>
-        function display(){
-            let item=document.getElementById("txt").value;
-            let list=document.getElementById("li");
-            let newItem = document.createElement("li");
-            newItem.textContent = item;
-            list.appendChild(newItem);
+        let t1=document.getElementById("t1");
+        let t2=document.getElementById("t2");
+        let ls=document.getElementById("list");
+
+
+        let frnds=["Arthi","Maha","Eshaya","Divya"];
+            function demo(){
+        ls.innerHTML="";
+        frnds.forEach(frnd=> {
+            if(frnd.includes(t1.value))
+        {
+            let li=document.createElement("li");
+            li.innerHTML=frnd;
+            ls.appendChild(li);
         }
-    </script>
-</head>
-<body id="main">
-
-    <input type="text" id="txt" placeholder="Enter element"></input>
-    <button onclick="display()">ADD</button>
-    <br>
-    <ul id="li"></ul>
-
-</body>
-</html>
+        });
+    }
+    t1.addEventListener("keyup",demo);
+    demo();
+        </script>
+    </html>
