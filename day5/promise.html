@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Javascript uses promises for handling asynchronous tasks like:
+        3 states of promise funtion
+
+        A promise has always three states:
+        1. Pending
+        The promise is still working.
+
+        2. Fulfilled (Resolved)
+        The promise completed successfully.
+
+        3. Rejected
+        The promise is rejected.
+
+        It will return only the state of it
+        ****ASYNCH TO SYCN****
+
+        eg.fetch()
+        */
+
+        const res=fetch("https://jsonplaceholder.typicode.com/users")//process 1
+            .then(x=>
+            {
+                return x.json()//Process 2
+            })
+            .then(user=>
+            {
+                console.log(user)//process 3
+            })
+        console.log(res)
+    </script>
+</body>
+</html>

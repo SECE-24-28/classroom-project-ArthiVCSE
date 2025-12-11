@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <button id="btn" onclick="press()">Load Users</button><br><br>
+    <input type="text" id="t1" placeholder="search"><br><br>
+    <table border="1px" id="tb"></table>
+
+    
+    <script>
+        function press() {
+            let fetchAPI = async () => {
+                const res = await fetch("https://jsonplaceholder.typicode.com/users");
+                const data = await res.json();
+
+                let tab = document.getElementById("tb");
+                tab.innerHTML = "";
+
+                let headerRow = document.createElement("tr");
+                let headers = ["Name", "Email", "City"];
+                headers.forEach(text => {
+                    let th = document.createElement("th");
+                    th.textContent = text;
+                    headerRow.appendChild(th);
+                });
+                tab.appendChild(headerRow);
+
+                data.forEach(user => {
+                    let row = document.createElement("tr");
+
+                    let nameCell = document.createElement("td");
+                    nameCell.textContent = user.name;
+
+                    let emailCell = document.createElement("td");
+                    emailCell.textContent = user.email;
+
+                    let cityCell = document.createElement("td");
+                    cityCell.textContent = user.address.city;
+
+                    row.appendChild(nameCell);
+                    row.appendChild(emailCell);
+                    row.appendChild(cityCell);
+
+                    tab.appendChild(row);
+                });
+            };
+
+            fetchAPI();
+        }
+    </script>
+</body>
+</html>
