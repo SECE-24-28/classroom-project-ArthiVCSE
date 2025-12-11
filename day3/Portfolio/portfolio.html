@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Arthi</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    /* --------- HERO SECTION --------- */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #4a67ff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #354ee0;
+    }
+
+    /* --------- ABOUT SECTION --------- */
+    .about {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 17px;
+      color: #555;
+    }
+
+    /* --------- SKILLS --------- */
+    .skills {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .skills h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .skill-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .badge {
+      background: #eef1ff;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-size: 15px;
+      color: #3d4bd1;
+      border: 1px solid #d3d8ff;
+    }
+
+    /* --------- PROJECTS --------- */
+    .projects {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    .project-card p {
+      color: #555;
+    }
+
+    /* --------- FOOTER --------- */
+    footer {
+      background: #1f2456;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav style="position:fixed;top:0;left:0;width:100%;background:#ffffffcc;backdrop-filter:blur(8px);padding:15px 30px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.1);z-index:100;">
+    <div style="font-size:20px;font-weight:600;color:#4a67ff;">Arthi</div>
+    <div style="display:flex;gap:25px;">
+      <a href="#about" style="text-decoration:none;color:#333;font-size:16px;">About</a>
+      <a href="#skills" style="text-decoration:none;color:#333;font-size:16px;">Skills</a>
+      <a href="#projects" style="text-decoration:none;color:#333;font-size:16px;">Projects</a>
+      <a href="#contact" style="text-decoration:none;color:#333;font-size:16px;">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <img src="your-photo.jpg" alt="Profile Photo" style="width:150px;height:150px;border-radius:50%;object-fit:cover;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.2);" />
+    <h1>Hello, I'm Arthi</h1>
+    <p>Aspiring Frontend Developer | HTML • CSS • UI Design</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <div class="about" id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate web designer who loves creating clean, modern, and responsive UI designs using only HTML & CSS. This portfolio showcases my practice projects and creative experiments.</p>
+  </div>
+
+  <!-- SKILLS SECTION -->
+  <div class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skill-badges">
+      <div class="badge">HTML</div>
+      <div class="badge">CSS</div>
+      <div class="badge">Responsive Design</div>
+      <div class="badge">Flexbox</div>
+      <div class="badge">Grid Layout</div>
+      <div class="badge">UI/UX Basics</div>
+    </div>
+  </div>
+
+  <!-- PROJECTS SECTION -->
+  <div class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>Landing Page Design</h3>
+        <p>A clean and aesthetic landing page built using HTML and CSS.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Portfolio Layout</h3>
+        <p>A minimal portfolio UI with glass-effect design and smooth spacing.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Food Website UI</h3>
+        <p>A modern food delivery homepage with cards and gradients.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Arthi | Designed with HTML & CSS
+  </footer>
+
+  <!-- CONTACT SECTION -->
+  <div id="contact" style="padding:80px 20px;max-width:900px;margin:auto;text-align:center;">
+    <h2>Contact Me</h2>
+    <p style="color:#555;margin-bottom:25px;">Feel free to reach out for collaborations or project discussions.</p>
+
+    <form style="display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;">
+      <input type="text" placeholder="Your Name" style="padding:12px;border-radius:8px;border:1px solid #ccc;font-size:15px;" />
+      <input type="email" placeholder="Your Email" style="padding:12px;border-radius:8px;border:1px solid #ccc;font-size:15px;" />
+      <textarea rows="4" placeholder="Message" style="padding:12px;border-radius:8px;border:1px solid #ccc;font-size:15px;"></textarea>
+      <button style="padding:12px;background:#4a67ff;color:#fff;border:none;border-radius:8px;font-size:16px;cursor:pointer;">Send Message</button>
+    </form>
+  </div>
+
+</body>
+</html>
