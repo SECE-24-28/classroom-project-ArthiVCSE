@@ -1,0 +1,248 @@
+REACT
+------
+Built in library, consists of collection of files and functions
+
+functions like specific functions will reduce the work
+EG: hoop functions
+-----------------------------------------------------------------
+
+let [age,setAge]=useState(21)
+setAge=24;
+
+useState returns an array ususally.
+------------------------------------------------------------------
+
+REACT --> Everything is considered as a component (function)
+
+Instead of reloading the whole page, it will releod only the necessary component for every action happened on the appln.
+
+DOM--> Hierarchical structure.
+
+JSX
+---
+SYNTAX
+ReactDom.render(<h1></h1>,"body")
+------
+JSX allows html inside the javascript
+-------------------------------------
+Babel compiler is present behindscene to compile jsx
+
+
+cmd:
+node -v
+
+npm create vite@latest react_app [Create a new project]
+cd react_app
+npm install [Install dependencies]
+npm run dev [Run the project]
+
+
+create-vite first_project
+
+React
+Javascript
+no
+Yes
+
+r+enter to restart the server
+u+enter to show server url
+o+enter to open in browser
+c+enter to clear console
+q+enter to quit
+
+In jsx, true, false, null,undefined are considered as nothing 
+
+npm
+---
+node package manager
+create
+vite --> build tool
+
+----------------------------------------------------------------------------------------
+
+Conditional Rendering in JSX
+----------------------------
+Using ternary operator
+<p>{age >= 18 ? "Adult" : "Minor"}</p>
+--------------------------------------
+Using &&
+{isLoggedIn && <h3>Welcome back!</h3>}
+
+
+-----------------------------------------
+
+REACT --> Everything is considered as a component (function)
+
+Instead of reloading the whole page, it will releod only the necessary component for every action happened on the appln.
+
+DOM--> Hierarchical structure. HTML ->Browser reads it -> Creates a tree-like model -> That model is the DOM
+Javascript uses the DOM to read, change, add or delete elements on the page.
+
+Eg: 
+HTML
+<h1 id="title">Hello</h1>
+
+Javascript:
+document.getElementById("title").innerHTML="Welcome";
+document-> your entire webpage
+
+getElementById("title") -> finds the <h1>
+.innerHTML ="Welcome!" -> updates the DOM -> the page changes
+
+Through DOM only browser can access the html elements.
+
+DOM as a Tree (Visual)
+----------------------
+
+Document
+    |____html
+	|_____head
+	|_____body
+		|_____h1(id="title")
+
+Why DOM is important?
+---------------------
+
+Because without DOM, Javascript can't interact with the webpage.
+
+
+------------------------------------------------------------------------
+
+Understanding the Virtual DOM
+
+Virtual DOM= A lightweight copy of the actual DOM.
+
+React changes UI by:
+Comparing Virtual DOM with previous version
+Updating only the changed part
+Fast and efficient
+
+
+
+Behind the scene there will be a virtual/ React DOM
+changes first will be made to virtual then to Original DOM
+
+
+DOM structure example
+---------------------
+
+HTML
+|
+Body
+|
+DIV
+|
+H5, H1, UL
+	|
+	LI, LI, LI
+
+----------------------
+  let demo=(name)=>{
+    console.log("Hi "+name)
+  }
+
+  return (
+    <>
+    <button onClick={()=>demo("Arthi")}>Click Me</button>
+    </>
+  )
+}
+
+
+
+--------------------------------------------------------------
+
+default syntax
+--------------
+
+import React from 'react'
+
+const ComponentName=()=>{
+    return(
+    )
+}
+export default ComponentName
+
+
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Header from './ComponentName'
+import Content from './ComponentName'
+
+function App() 
+{
+  return (
+    <>
+      <ComponentName/>
+      <ComponentName/>
+    </>
+  )
+}
+
+export default App
+
+----------------------------------------------------------------------------
+
+What is a React Component?
+	 A react Component is just a fnction that return UI (HTML -like code).
+
+Example Components:
+	Navbar
+	Foooter
+	Button
+	Card
+	Login Form
+	
+	React apps are built by combining multiple components.
+-----------------------------------------------------------------------------
+
+Types of components:
+
+React has two types:
+	1 Functional Components (Most commonly used)
+
+		These are simple Javascript functions.
+Code:
+		function Welcome(){
+			return <h2> Welcome to React! </h2>
+		}
+		export default Welcome;
+-----------------------------------------------------------------------------
+	2. Class Components (Old, not used much row)
+
+Code:		class Hello extends ReactComponent{
+			render()
+			{
+				return <h1> Hellow World! </h2>
+			}
+		}
+
+------------------------------------------------------------------------------
+
+Why Components:
+	Reusable
+	Easy to manage
+	Clean code
+	Organized UI
+	Can pass data using props
+	Can store data using state
+-----------------------------------------------------------------------------
+Props Drilling - Props inside props
+
+issues in props: cant share data betweeen siblings
+                 cant share data from child to parent
+
+-----------------------------------------------------------------------------
+
+Context API
+-----------
+
+Term - Meaning
+--------------
+createContext() - Creates a global data store
+DataContext - The store you created
+Provider - Makes data available to all components
+useContext - Used to read data
+-------------------------------------------------------------------------------
