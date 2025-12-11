@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    width: 320px;
+  }
+
+  .font {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .buttonclass {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 8px;
+  }
+
+  button.buttonclass {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button.buttonclass:hover {
+    background-color: #b30000;
+  }
+
+</style>
+</head>
+<body>
+    
+<form action="portfolio.html" >
+<div class="container">
+            <div><label class="font" for="username">Username</label><br>
+            <input id="username" name="username" class="buttonclass" type="text" placeholder="Enter username" required><br><br>
+            </div>
+            <div>
+            <label class="font" for="password">Password</label><br>
+            <input name="password" id="password" class="buttonclass" type="password" placeholder="Enter password" required>
+            </div><br><br>
+            <div> <input type="checkbox">Remember me
+            <br><br>
+            </div>
+            <div><button type="submit" class="buttonclass">Login</button></div>
+</div>
+</form>
+</body>
+</html>

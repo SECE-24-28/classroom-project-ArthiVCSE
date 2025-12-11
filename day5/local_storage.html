@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1">
+    <button id="bt">Save</button>
+    <script>
+        let t1=document.getElementById("t1")
+        let btn=document.getElementById("bt")
+        btn.addEventListener("click",()=>
+    {
+        localStorage.setItem("myname",t1.value);
+        //localStorage.getItem("myname");
+        t1.value=""
+    })
+    </script>
+</body>
+</html>

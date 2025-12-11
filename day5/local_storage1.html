@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1">
+    <input type="text" id="t2">
+    <button id="btn">Save</button>
+    <script>
+        let t1=document.getElementById("t1")
+        let t2=document.getElementById("t2")
+        btn.addEventListener("click",()=>
+    {
+        let na=t1.value;
+        let ph=t2.value;
+        let frnd={fna:na,fph:ph}
+        localStorage.setItem("contact",JSON.stringify(frnd));
+        t1.value="";
+        t2.value="";
+    })
+    </script>
+</body>
+</html>
