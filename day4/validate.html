@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Username</label>
+        <input type="text" id="user"><br><br>
+
+        <label for="">Email</label>
+        <input type="text" id="mail"><br><br>
+        
+        <button type="submit" id="sub">Submit</button>
+        <p id="error" style="color:red";></p>
+    </form>
+    <script>
+        let er=document.getElementById("error");
+        let us=document.getElementById("user");
+        let ma=document.getElementById("mail");
+        let sub=document.getElementById("sub");
+        
+        sub.addEventListener("click",(e)=>
+        {
+            e.preventDefault();
+            if(us.value==""||ma.value==""){
+                er.innerHTML="Fields should not be empty";
+            }
+            else{
+                alert("Login successfull");
+                us.value="";
+                ma.vallue="";
+                er.innerHTML="";
+            }
+        })
+        </script>
+        <!--<srcipt>
+            let i=1;
+            function demo(){
+                //alert(i);
+                console.log(i);
+                i++; 
+            }
+                setInterval(demo,1000)
+        </script>-->
+</body>
+</html>
