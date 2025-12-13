@@ -1,0 +1,12 @@
+[
+    {
+        "cid":1,
+        "cname":"Java",
+        "cdur":"2 months"
+    },
+    {
+        "cid":2,
+        "cname":"DSA",
+        "cdur":"2 months"
+    }
+]

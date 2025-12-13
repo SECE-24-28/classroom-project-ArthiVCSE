@@ -1,0 +1,30 @@
+show dbs;
+show collections;
+use college;
+---------------------------------------------------------------------------
+db.student.insertOne({sna:"Victor",age:21,dep:"cse"});
+db.student.find();
+db.student.insertMany([{sna:"Jack",age:19,dep:"cse"},{sna:"Jack",age:19,dep:"cse"},{sna:"Jack",age:19,dep:"cse"}]);
+db.student.find({dep:"cse"});
+db.student.find({dep:"cse"}).skip(1);
+db.student.find({dep:"cse"}).limit(2);
+---------------------------------------------------------------------------
+db.student.find({age:{$gte:20}})
+db.student.find({sna:"jeeva",age:21}) ---->and
+db.student.find($or:[{sna:"jeeva"},{age:21}]}) ---->or
+---------------------------------------------------------------------------
+db.student.find({sna:"jeeva",age:21},{sna:1,dep:1})
+db.student.find({sna:"jeeva",age:21},{sna:1,dep:1,_id:0})
+---------------------------------------------------------------------------
+db.student.find().sort({age:1})
+db.student.find().sort({age:-1})
+---------------------------------------------------------------------------
+db.student.updateOne({sna:"Victor",{$set:{age:25}})
+db.student.updateOne({sna:"Victor",{$set:{age:25,dep:"civil"}})
+---------------------------------------------------------------------------
+db.student.deleteOne({sna:"Victor"})
+---------------------------------------------------------------------------
+db.student.insertOne({sna:"Victor"age:21,ck:["C","Java","React"]})
+db.student.updateOne({sna:"Vimal"},{$push:{ck:"python"}})
+---------------------------------------------------------------------------
+db.student.updateOne({sna:"Vimal"},{$pull:{ck:"python"}})
