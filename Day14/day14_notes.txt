@@ -1,0 +1,48 @@
+What is JWT?
+------------------------------
+JWT is a secure token given by the server after login .
+This Token is used to prove your identity when accessing protected API's
+
+Think of JWT like an id card
+
+why do we need jwt?
+--------------------------------
+without jwt server must remember every login user&not scalable
+with jwt
+server does not store session
+client sends token every time 
+fast and secured
+
+used in mern,rest api's,mobile apps
+jwt expansion
+  jwt=json web token
+jwt structure
+a jwt has 3 parts separated by dots:
+header.payload.signature
+
+example:
+eylkhfdssaqwertyuiopzxcvbnmQQx...
+
+Part Meaning
+Header-->token type & algorithm
+Payload-->user data
+signature-->security lock
+
+
+password is never stored in jwt?
+how jwt works(flow)
+login->server creates jwt ->client stores jwt->client sends jwt ->server verifies ->access allowed
+Real Life Scenario
+cinema example
+buy ticket =login
+ticket=jwt
+show ticket=api request
+
+Frontend
+
+npm install bcrypt
+npm install jsonwebtoken
+npm install dotenv
+npm install express
+npm install mongoose
+npm install cors
